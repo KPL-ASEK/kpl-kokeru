@@ -113,9 +113,10 @@
 
   }
   @include media-breakpoint-up(sm) {
-
+    
     .dropdown {
       position: relative;
+      
       .dropdown-menu {
         width: auto;
         right: 0;
