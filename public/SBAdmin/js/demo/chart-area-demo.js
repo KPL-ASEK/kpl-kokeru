@@ -1,5 +1,5 @@
 // Set new default font family and font color to mimic Bootstrap's default styling
-Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+Chart.defaults.global.defaultFontFamily = "Nunito", "-apple-system,system-ui,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif";
 Chart.defaults.global.defaultFontColor = "#858796";
 
 function number_format(number, decimals, dec_point, thousands_sep) {
@@ -9,7 +9,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   var n = !isFinite(+number) ? 0 : +number,
     prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
     sep = (typeof thousands_sep === "undefined") ? "," : thousands_sep,
-    dec = (typeof dec_point === "undefined") ? '.' : dec_point,
+    dec = (typeof dec_point === "undefined") ? "." : dec_point,
     s = "",
     toFixedFix = function(n, prec) {
       var k = Math.pow(10, prec);
