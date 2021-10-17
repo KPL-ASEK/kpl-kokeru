@@ -61,9 +61,9 @@ class PegawaiController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($kode)
     {
-        $editQ = User::find($id);
+        $editQ = User::find($kode);
         return view('content.pegawai.edit', compact('editQ'));
         
     }
@@ -75,14 +75,14 @@ class PegawaiController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $kode)
     {
         $request->validate([
             "name" =>'required',
             "email" => 'required',
         ]);
 
-        User::where('id',$id)->update([
+        User::where('id',$kode)->update([
             'name' => $request["name"],
             'email' => $request["email"],
         ]);
@@ -95,9 +95,9 @@ class PegawaiController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($kode)
     {
-        User::destroy($id);
+        User::destroy($kode);
         return redirect('/pegawai')->with('toast_success','User Berhasil DiHapus');
     }
 }

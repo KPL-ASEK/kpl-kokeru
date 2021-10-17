@@ -57,9 +57,9 @@ class RuangController extends Controller
      * @param  \App\Models\Ruang  $ruang
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($kode)
     {
-        $editQ = Ruang::find($id);
+        $editQ = Ruang::find($kode);
         return view('content.ruang.edit', compact('editQ'));
     }
 
@@ -70,14 +70,14 @@ class RuangController extends Controller
      * @param  \App\Models\Ruang  $ruang
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $kode)
     {
         $request->validate([
             "nama" =>'required|unique:ruang',
             "deskripsi" => 'required',
         ]);
 
-        Ruang::where('id',$id)->update([
+        Ruang::where('id',$kode)->update([
             "nama" => $request["nama"],
             "deskripsi" => $request["deskripsi"],
         ]);
@@ -91,9 +91,9 @@ class RuangController extends Controller
      * @param  \App\Models\Ruang  $ruang
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($kode)
     {
-        Ruang::destroy($id);
+        Ruang::destroy($kode);
         return redirect('/ruang')->with('toast_info','Ruang Berhasil DiHapus');
     }
 }
