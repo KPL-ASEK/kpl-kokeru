@@ -16,7 +16,8 @@ body {
 }
 
 .banner-sec {
-    background: url(https://images.unsplash.com/photo-1579762593175-20226054cad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=807&q=80)
+    background: 
+        url(https://images.unsplash.com/photo-1579762593175-20226054cad0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=807&q=80)
         no-repeat left bottom;
     background-size: cover;
     min-height: 500px;
