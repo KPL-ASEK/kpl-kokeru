@@ -5,7 +5,6 @@
   #sidebarToggleTop {
     height: 2.5rem;
     width: 2.5rem;
-    
     &:hover {
       background-color: $gray-200;
     }
@@ -113,7 +112,7 @@
 
   }
   @include media-breakpoint-up(sm) {
-    
+
     .dropdown {
       position: relative;
       
