@@ -1,6 +1,7 @@
 // Topbar
 .topbar {
   height: $topbar-base-height;
+
   #sidebarToggleTop {
     height: 2.5rem;
     width: 2.5rem;
@@ -109,8 +110,10 @@
         color: $gray-900;
       }
     }
+
   }
   @include media-breakpoint-up(sm) {
+
     .dropdown {
       position: relative;
       .dropdown-menu {
@@ -154,9 +157,11 @@
     .nav-item {
       .nav-link {
         color: $gray-400;
+
         &:hover {
           color: $gray-500;
         }
+        
         &:active {
           color: $gray-600;
         }
